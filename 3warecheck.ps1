@@ -2,12 +2,12 @@
 
 tw_cli /c0 show all | out-file C:\3ware.txt
 tw_cli /c0 show alarms | out-file C:\3ware.txt -append
-$fromaddress = "windows-task@asc.edu"
-$toaddress = "sysadmins@asc.edu"
-$Subject = "ASAHSVHV1 3ware notification"
+$fromaddress = "windows-task@company.com"
+$toaddress = "sysadmins@company.com
+$Subject = "3ware notification"
 $body = "3ware notification from Hyper-V server"
 $attachment = "C:\3ware.txt"
-$smtpserver = "exchange.asc.edu"
+$smtpserver = "mail.company.com"
 
 ####################################
 
