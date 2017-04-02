@@ -2,12 +2,12 @@
 
 $compname = $env:COMPUTERNAME
 $getservice = (Get-CimInstance win32_service) | Where {$_.state -eq 'stopped' -and $_.startmode -eq 'auto' -and $_.name -ne 'sppsvc' -and $_.name -ne 'clr_optimization_v4.0.30319_64' -and $_.name -ne 'clr_optimization_v4.0.30319_32' -and $_.name -ne 'swprv' -and $_.name -ne 'RemoteRegistry' -and $_.name -ne 'ShellHWDetection'}
-$fromaddress = "windows-task@asc.edu"
-$toaddress = "windowsadmins@asc.edu"
+$fromaddress = "windows-task@company.com"
+$toaddress = "admin@company.com"
 $Subject = "$compname Service Error"
 $body = Get-Content -Path C:\ServiceCheck.txt
 $attachment = "C:\ServiceCheck.txt"
-$smtpserver = "exchange.asc.edu"
+$smtpserver = "mail.company.com"
 
 ####################################
 $getservice | Sort displayname | select displayname, name, state, startmode | ft -auto |out-file C:\ServiceCheck.txt;
