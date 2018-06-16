@@ -1,5 +1,5 @@
 Param(
-$directories = "",
+$directory = "",
 
 $zipdir = "C:\tmp\zipdir",
 
