@@ -1,3 +1,5 @@
+Param(
+$directories = "",
 
 $zipdir = "C:\tmp\zipdir",
 
