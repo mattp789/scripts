@@ -6,7 +6,7 @@ $zipdir = "C:\tmp\zipdir",
 #Current Date and Time
 $date = (get-date -format "yyyy_MM_dd_hh_ss"),
 
-$destination = "C:\Users\matthew.parker\Desktop\backup1\zipped$date.zip",
+$destination = "C:\Users\Desktop\backup1\zipped$date.zip",
 
 $fileextention = @("bak", "trc")
 )
